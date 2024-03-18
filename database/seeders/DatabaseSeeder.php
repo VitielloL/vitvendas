@@ -13,5 +13,7 @@ class DatabaseSeeder extends Seeder
         $this->call(popula_cliente::class);
         $this->call(popula_produto::class);
         $this->call(popula_venda::class);
+        $this->call(popula_itens_venda::class);
+        $this->call(popula_parcela::class);
     }
 }
