@@ -1,5 +1,6 @@
 # VitVendas
 
+Sistema de vendas generico - PHP / Laravel
 
 <br/>
 
