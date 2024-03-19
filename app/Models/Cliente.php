@@ -25,7 +25,7 @@ class Cliente extends Model
 
     public function vendas()
     {
-        return $this->hasMany(Venda::class, 'cliente');
+        return $this->hasMany(Venda::class, 'cliente_id');
     }
 
     use HasFactory;

@@ -29,7 +29,7 @@
                         @endphp
                         <tr>
                             <td style="vertical-align:middle">{{$dado->id}}</td>
-                            <td style="vertical-align:middle"><span class="text-success" style="font-weight:bold"></span>{{$dado->cliente}}</td>
+                            <td style="vertical-align:middle"><span class="text-success" style="font-weight:bold"></span>{{$dado->cliente->nome}}</td>
                             <td style="vertical-align:middle">{{$dado->forma_de_pagamento}}</td>
                             <td style="vertical-align:middle">{{$dado->data_venda}}</td>
                             <td style="vertical-align:middle">{{$dado->total_venda}}</td>

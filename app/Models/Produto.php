@@ -17,7 +17,7 @@ class Produto extends Model
 
     public function itensVenda()
     {
-        return $this->hasMany(Itens_Venda::class, 'produto');
+        return $this->hasMany(Itens_Venda::class, 'produto_id');
     }
 
     use HasFactory;

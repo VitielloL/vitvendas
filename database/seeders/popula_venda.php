@@ -11,7 +11,7 @@ class popula_venda extends Seeder
     public function run(): void
     {
         DB::table('venda')->insert([
-            'cliente' => '1',
+            'cliente_id' => '1',
             'forma_de_pagamento' => 'dinheiro',
             'data_venda' => '2024-03-12',
             'total_venda' => '100',

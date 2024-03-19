@@ -11,8 +11,8 @@ class popula_itens_venda extends Seeder
     public function run(): void
     {
         DB::table('itens_venda')->insert([
-            'venda' => '1',
-            'produto' => '1',
+            'venda_id' => '1',
+            'produto_id' => '1',
             'quantidade' => '10',
             'preco_unitario' => '10',
             'subtotal' => '100',

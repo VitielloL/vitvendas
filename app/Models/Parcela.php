@@ -10,7 +10,7 @@ class Parcela extends Model
     protected $table = 'parcela';
 
     protected $fillable = [
-        'venda',
+        'venda_id',
         'numero_parcela',
         'data_vencimento',
         'valor',
@@ -19,7 +19,7 @@ class Parcela extends Model
 
     public function venda()
     {
-        return $this->belongsTo(Venda::class, 'venda');
+        return $this->belongsTo(Venda::class, 'venda_id');
     }
 
     use HasFactory;

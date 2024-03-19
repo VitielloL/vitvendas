@@ -10,13 +10,13 @@ return new class extends Migration
     {
         Schema::create('parcela', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('venda')->unsigned();
+            $table->integer('venda_id')->unsigned();
             $table->decimal('numero_parcela');
             $table->date('data_vencimento');
             $table->decimal('valor');
             $table->string('status');
             $table->timestamps();
-            $table->foreign('venda')->references('id')->on('venda')->onDelete('cascade');
+            $table->foreign('venda_id')->references('id')->on('venda')->onDelete('cascade');
         });
     }
 

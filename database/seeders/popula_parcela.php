@@ -11,7 +11,7 @@ class popula_parcela extends Seeder
     public function run(): void
     {
         DB::table('parcela')->insert([
-            'venda' => '1',
+            'venda_id' => '1',
             'numero_parcela' => '10',
             'data_vencimento' => '2024-03-12',
             'valor' => '10',

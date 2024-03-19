@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const quantidadeInput = document.getElementById('quantidade');
-    const valorUnitarioInput = document.getElementById('valor_unitario');
-    const subtotalInput = document.getElementById('subtotal');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const quantidadeInput = document.getElementById('quantidade');
+//     const valorUnitarioInput = document.getElementById('valor_unitario');
+//     const subtotalInput = document.getElementById('subtotal');
 
-    quantidadeInput.addEventListener('input', calcularSubtotal);
-    valorUnitarioInput.addEventListener('input', calcularSubtotal);
+//     quantidadeInput.addEventListener('input', calcularSubtotal);
+//     valorUnitarioInput.addEventListener('input', calcularSubtotal);
 
-    function calcularSubtotal() {
-        const quantidade = parseFloat(quantidadeInput.value) || 0;
-        const valorUnitario = parseFloat(valorUnitarioInput.value) || 0;
-        const subtotal = quantidade * valorUnitario;
-        subtotalInput.value = subtotal.toFixed(2); // Arredondar para 2 casas decimais
-    }
-});
+//     function calcularSubtotal() {
+//         const quantidade = parseFloat(quantidadeInput.value) || 0;
+//         const valorUnitario = parseFloat(valorUnitarioInput.value) || 0;
+//         const subtotal = quantidade * valorUnitario;
+//         subtotalInput.value = subtotal.toFixed(2); // Arredondar para 2 casas decimais
+//     }
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const quantidadeInput = document.getElementById('quantidade');
