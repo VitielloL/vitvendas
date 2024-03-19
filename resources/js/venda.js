@@ -55,3 +55,53 @@ document.addEventListener('DOMContentLoaded', function() {
         subtotalInput.value = subtotal.toFixed(2); // Arredondar para 2 casas decimais
     }
 });
+
+document.getElementById('parcelas').addEventListener('input', function() {
+    const numParcelas = parseInt(this.value);
+    const camposParcelas = document.getElementById('camposParcelas');
+
+    // Limpa os campos de parcelas anteriores
+    camposParcelas.innerHTML = '';
+
+    // Cria novos campos de parcelas
+    for (let i = 1; i <= numParcelas; i += 4) {
+        const divLinha = document.createElement('div');
+        divLinha.classList.add('form-row', 'mb-2', 'col-md-8');
+
+        for (let j = i; j <= i + 3; j++) {
+            if (j <= numParcelas) {
+                const divParcela = document.createElement('div');
+                divParcela.classList.add('col-md-3');
+
+                const labelParcela = document.createElement('label');
+                labelParcela.classList.add('form-label');
+                labelParcela.textContent = `Parcela ${j}: `;
+                divParcela.appendChild(labelParcela);
+
+                const divValorParcela = document.createElement('div');
+                divValorParcela.classList.add('form-group');
+                const inputValorParcela = document.createElement('input');
+                inputValorParcela.type = 'text';
+                inputValorParcela.classList.add('form-control');
+                inputValorParcela.name = `valor_parcela_${j}`;
+                inputValorParcela.placeholder = 'Valor da Parcela';
+                divValorParcela.appendChild(inputValorParcela);
+                divParcela.appendChild(divValorParcela);
+
+                const divDataParcela = document.createElement('div');
+                divDataParcela.classList.add('form-group');
+                const inputDataParcela = document.createElement('input');
+                inputDataParcela.type = 'date';
+                inputDataParcela.classList.add('form-control');
+                inputDataParcela.name = `data_parcela_${j}`;
+                inputDataParcela.placeholder = 'Data de Vencimento';
+                divDataParcela.appendChild(inputDataParcela);
+                divParcela.appendChild(divDataParcela);
+
+                divLinha.appendChild(divParcela);
+            }
+        }
+
+        camposParcelas.appendChild(divLinha);
+    }
+});

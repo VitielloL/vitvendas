@@ -45,6 +45,25 @@
                 </div>
             </div>
 
+            <div class="form-group row">
+                <div class="col-md-4">
+                <label class="form-label" for="forma_pagamento">Forma de Pagamento: </label>
+                    <select class="custom-select custom-select-md mb-3" name="forma_pagamento" id="forma_pagamento" required>
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao_credito">Cartão de Crédito</option>
+                        <!-- Adicione outras opções de forma de pagamento conforme necessário -->
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label" for="parcelas">Parcelas: </label>
+                    <input type="number" class="form-control" id="parcelas" name="parcelas" min="1" required>
+                </div>
+            </div>
+
+            <div id="camposParcelas">
+                <!-- Aqui serão adicionados os campos das parcelas dinamicamente -->
+            </div>
+            
             <ul id="listaProdutos"></ul>
 
             <div class="mt-4 text-end">
