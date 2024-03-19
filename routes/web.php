@@ -14,6 +14,13 @@ Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/venda', [VendaController::class, 'index'])->name('venda');
+    Route::get('/venda/novo', [VendaController::class, 'create'])->name('venda.novo');
+    Route::post('/venda/store', [VendaController::class, 'store'])->name('venda.store');
+    Route::get('/venda/{id}', [VendaController::class, 'show'])->name('venda.show');
+    Route::get('/venda/editar/{id}', [VendaController::class, 'edit'])->name('venda.editar');
+    Route::put('/venda/update/{id}', [VendaController::class, 'update'])->name('venda.update');
+    Route::get('/venda/remover/{id}', [VendaController::class, 'destroy'])->name('venda.remover');
+
 
     Route::get('/cliente', [ClienteController::class, 'index'])->name('cliente');
     Route::get('/cliente/novo', [ClienteController::class, 'create'])->name('cliente.novo');

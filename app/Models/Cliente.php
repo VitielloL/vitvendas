@@ -23,5 +23,10 @@ class Cliente extends Model
         'complemento',
     ];
 
+    public function vendas()
+    {
+        return $this->hasMany(Venda::class, 'cliente');
+    }
+
     use HasFactory;
 }

@@ -15,5 +15,10 @@ class Produto extends Model
         'descricao',
     ];
 
+    public function itensVenda()
+    {
+        return $this->hasMany(Itens_Venda::class, 'produto');
+    }
+
     use HasFactory;
 }
