@@ -55,15 +55,3 @@ document.addEventListener('DOMContentLoaded', function() {
         subtotalInput.value = subtotal.toFixed(2); // Arredondar para 2 casas decimais
     }
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    const produtoSelect = document.getElementById('produto');
-    const valorUnitarioInput = document.getElementById('valor_unitario');
-    
-    produtoSelect.addEventListener('change', function() {
-        const selectedOption = produtoSelect.options[produtoSelect.selectedIndex];
-        const valorProduto = parseFloat(selectedOption.getAttribute('data-valor'));
-        console.log('Valor do produto:', valorProduto);
-        valorUnitarioInput.value = isNaN(valorProduto) ? '' : valorProduto.toFixed(2);
-    });
-});
